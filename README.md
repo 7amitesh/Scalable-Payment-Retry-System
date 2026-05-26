@@ -1,35 +1,105 @@
-# Payroll Processing & SLA-Safe Escalation System
+# Fault-Tolerant Payroll Processing System
 
-## Problem Statement
-Payroll failures before SLA deadlines cause financial penalties.
-This system ensures automatic payroll processing, retry handling,
-and SLA-based escalation notifications.
+A backend payroll processing platform designed to ensure reliable salary processing, retry handling, and SLA-safe escalation workflows.
+
+
 
 ## Tech Stack
+
 - Java
 - Spring Boot
 - MySQL
 - Thymeleaf
-- AWS (Deployment)
+- AWS
+- Maven
+
 
 ## Key Features
-- Strategy-based payroll salary calculation
-- Factory-based processor creation
-- Observer-based failure notification system
-- SLA escalation scheduler
-- Retry mechanism before escalation
-- Live payroll dashboard UI
 
-## Architecture
-(Add architecture diagram screenshot)
+- Automated payroll processing workflows
+- Retry handling with exponential backoff
+- SLA-based escalation and notification system
+- Structured logging and centralized error handling
+- Live payroll monitoring dashboard
+- Fault-tolerant backend workflow design
 
-## How to Run
+---
+
+## System Architecture
+
+```text
+Payroll Request
+      ↓
+Payroll Processing Service
+      ↓
+Retry Handler & Scheduler
+      ↓
+SLA Escalation Engine
+      ↓
+Notification Service
+      ↓
+Monitoring Dashboard
+```
+
+
+## Project Structure
+
+```text
+src/
+├── controller/
+├── service/
+├── scheduler/
+├── observer/
+├── factory/
+├── repository/
+├── model/
+├── config/
+└── exception/
+```
+
+
+
+## Getting Started
+
+### Clone Repository
+
+```bash
+git clone https://github.com/7amitesh/Scalable-Payment-Retry-System.git
+```
+
+### Navigate to Project
+
+```bash
+cd Scalable-Payment-Retry-System
+```
+
+### Run Application
+
+```bash
 mvn spring-boot:run
+```
 
-Open:
+### Open Dashboard
+
+```text
 http://localhost:8080/dashboard
+```
+
+
+## Core Concepts
+
+- Fault-Tolerant System Design
+- Retry Recovery Workflows
+- SLA Escalation Handling
+- Concurrent Backend Processing
+- Structured Logging
+- Scheduler-Based Automation
+
 
 ## Future Improvements
-Kafka event streaming
-Distributed retry queue
-Microservices deployment
+
+- Redis-based retry queue
+- Kafka event streaming
+- Docker deployment
+- Microservices architecture
+
